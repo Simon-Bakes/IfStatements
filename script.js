@@ -1,6 +1,6 @@
 function equalsTo(){
     let firstEqual = document.getElementById("input1").value;
-    let secondEqual = document.getElementById("input2").value;
+    let secondEqual = document.getElementById("input1.1").value;
     if(firstEqual==secondEqual){
         document.getElementById("output1").innerHTML = firstEqual+" is equal to "+secondEqual;
     }else{
@@ -9,7 +9,7 @@ function equalsTo(){
 }
 
 function evenOdd(){
-    let inputEvenOdd = document.getElementById("input3").value;
+    let inputEvenOdd = document.getElementById("input2").value;
     if(inputEvenOdd%2 == 0){
         document.getElementById("output2").innerHTML = inputEvenOdd+" is even";
     }else{
@@ -18,7 +18,7 @@ function evenOdd(){
 }
 
 function leapYear(){
-    let leapYear = document.getElementById("input4").value;
+    let leapYear = document.getElementById("input3").value;
     if(leapYear%4 == 0){
         document.getElementById("output3").innerHTML = leapYear+" is a leap year";
     }else{
@@ -27,7 +27,7 @@ function leapYear(){
 }
 
 function posNegNum(){
-    let posNeg = document.getElementById("input5").value;
+    let posNeg = document.getElementById("input4").value;
     if(posNeg > 0){
         document.getElementById("output4").innerHTML = posNeg+" is a positive number";
     }else if(posNeg == 0){
@@ -39,7 +39,7 @@ function posNegNum(){
 }
 
 function positionRun(){
-    let position = document.getElementById("input6").value;
+    let position = document.getElementById("input5").value;
     switch(true){
         case position >= 35:
             document.getElementById("output5").innerHTML = "You are old enough to run for MP, Prime Minister, Senator & President.";
@@ -56,7 +56,7 @@ function positionRun(){
 }
 
 function heightCal(){
-    let height = document.getElementById("input7").value;
+    let height = document.getElementById("input6").value;
     switch(true){
         case height >= 195:
             document.getElementById("output6").innerHTML = "You are a giant.";
@@ -72,5 +72,173 @@ function heightCal(){
             break;
         default:
             document.getElementById("output6").innerHTML = "You are a dwarf.";
+    }
+}
+
+function bigNum(){
+    let num1 = document.getElementById("input7").value;
+    let num2 = document.getElementById("input7.1").value;
+    let num3 = document.getElementById("input7.2").value;
+    switch(true){
+        case num1 > num2:
+            if(num1>num3){
+                document.getElementById("output7").innerHTML = "The biggest number is: "+num1;
+            }else{
+                document.getElementById("output7").innerHTML = "The biggest number is: "+num3;
+            }
+            break;
+        case num1 > num3:
+            if(num2>num3){
+                document.getElementById("output7").innerHTML = "The biggest number is: "+num2;
+            }else{
+                document.getElementById("output7").innerHTML = "The biggest number is: "+num3;
+            }
+            break;
+        case num2 > num1:
+            if(num2>num3){
+                document.getElementById("output7").innerHTML = "The biggest number is: "+num2;
+            }else{
+                document.getElementById("output7").innerHTML = "The biggest number is: "+num3;
+            }
+            break;
+        default:
+            document.getElementById("output7").innerHTML = "The biggest number is: "+num3;
+    }
+}
+
+function uniCal(){
+    let mathGrades = document.getElementById("input8").value;
+    let phyGrades = document.getElementById("input8.1").value;
+    let chemGrades = document.getElementById("input8.2").value;
+    let finalGrade = +mathGrades+ +phyGrades+ +chemGrades;
+    let cheekyPass1 = +mathGrades+ +phyGrades;
+    let cheekyPass2 = +mathGrades+ +chemGrades;
+    if(mathGrades>69 && phyGrades>54 && chemGrades>44){
+        switch(true){
+            case finalGrade>179:
+    document.getElementById("output8").innerHTML = "Off to college you go.";
+    break;
+    default:
+        document.getElementById("output8").innerHTML = "Lmao failed.";
+        }
+    }else if(cheekyPass1>149){
+        document.getElementById("output8").innerHTML = "Off to college you go.";
+    }else if(cheekyPass2>149){
+        document.getElementById("output8").innerHTML = "Off to college you go.";
+    }else{
+        document.getElementById("output8").innerHTML = "Lmao failed.";
+    }
+}
+
+function tempCal(){
+    let temp = document.getElementById("input9").value;
+    switch(true){
+        case temp<0:
+            document.getElementById("output9").innerHTML = "Cold as hell.";
+            break;
+        case temp<=10:
+            document.getElementById("output9").innerHTML = "Cold.";
+            break;
+        case temp<=20:
+            document.getElementById("output9").innerHTML = "Warm.";
+            break;  
+        case temp<=30:
+            document.getElementById("output9").innerHTML = "Hot.";
+            break;  
+        case temp<=40:
+            document.getElementById("output9").innerHTML = "Really Hot.";
+            break;
+        case temp>=40:
+            document.getElementById("output9").innerHTML = "Hell on earth.";
+            break;    
+    }
+}
+
+function triCal(){
+    let sideA = document.getElementById("input10").value;
+    let sideB = document.getElementById("input10.1").value;
+    let sideC = document.getElementById("input10.2").value;
+    let sum2Sides1 = +sideA+ +sideB;
+    let sum2Sides2 = +sideB+ +sideC;
+    let sum2Sides3 = +sideA+ +sideC;
+    if(sum2Sides1>sideC && sum2Sides2>sideA && sum2Sides3>sideB){
+        document.getElementById("output10").innerHTML = "It is a triangle.";
+    }else{
+        document.getElementById("output10").innerHTML = "It isn't a triangle.";
+    }
+}
+
+function gradeCal(){
+    let grade = document.getElementById("input11").value;
+    switch(grade/1){
+        case 6:
+            document.getElementById("output11").innerHTML = "Grade S.";
+            break;
+        case 5:
+            document.getElementById("output11").innerHTML = "Grade A.";
+            break;
+        case 4:
+            document.getElementById("output11").innerHTML = "Grade B.";
+            break;
+        case 3:
+            document.getElementById("output11").innerHTML = "Grade C.";
+            break;
+        case 2:
+            document.getElementById("output11").innerHTML = "Grade D.";
+            break;
+        case 1:
+            document.getElementById("output11").innerHTML = "Grade F.";
+            break;
+        default:
+            document.getElementById("output11").innerHTML = "Not a grade.";
+    }
+}
+
+function dayCal(){
+    let day = document.getElementById("input12").value;
+    switch(day/1){
+        case 7:
+            document.getElementById("output12").innerHTML = "Sunday.";
+            break;
+        case 6:
+            document.getElementById("output12").innerHTML = "Saturday.";
+            break;
+        case 5:
+            document.getElementById("output12").innerHTML = "Friday.";
+            break;
+        case 4:
+            document.getElementById("output12").innerHTML = "Thursday.";
+            break;
+        case 3:
+            document.getElementById("output12").innerHTML = "Wednesday.";
+            break;
+        case 2:
+            document.getElementById("output12").innerHTML = "Tuesday.";
+            break;
+        case 1:
+            document.getElementById("output12").innerHTML = "Monday.";
+            break;
+        default:
+            document.getElementById("output12").innerHTML = "Not a day.";
+    }
+}
+
+function calculatorCode(){
+    let x = document.getElementById("input13").value;
+    let y = document.getElementById("input13.1").value;
+    let op = document.getElementById("input13.2").value;
+    let sum;
+    if (op==='+') {
+        sum = +x+ +y;
+        document.getElementById("output13").innerHTML = "Answer is: "+sum;
+    }else if(op==='-'){
+        sum = x-y;
+        document.getElementById("output13").innerHTML = "Answer is: "+sum;
+    }else if(op==='*'){
+        sum = x*y;
+        document.getElementById("output13").innerHTML = "Answer is: "+sum;
+    }else{
+        sum = x/y;
+        document.getElementById("output13").innerHTML = "Answer is: "+sum;
     }
 }
