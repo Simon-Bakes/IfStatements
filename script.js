@@ -10,16 +10,16 @@ function equalsTo(){
 
 function evenOdd(){
     let inputEvenOdd = document.getElementById("input2").value;
-    if(inputEvenOdd%2 == 0){
-        document.getElementById("output2").innerHTML = inputEvenOdd+" is even";
+    if(inputEvenOdd % 2 == 0){
+        document.getElementById("output2").innerHTML = inputEvenOdd + " is even";
     }else{
-        document.getElementById("output2").innerHTML = inputEvenOdd+" is odd";
+        document.getElementById("output2").innerHTML = inputEvenOdd + " is odd";
         }
 }
 
 function leapYear(){
     let leapYear = document.getElementById("input3").value;
-    if(leapYear%4 == 0){
+    if(leapYear % 4 == 0){
         document.getElementById("output3").innerHTML = leapYear+" is a leap year";
     }else{
         document.getElementById("output3").innerHTML = leapYear+" isn't a leap year";
@@ -122,7 +122,7 @@ function uniCal(){
         document.getElementById("output8").innerHTML = "Lmao failed.";
         }
     }else if(cheekyPass1>149){
-        document.getElementById("output8").innerHTML = "Off to college you go.";
+        document.getElementById("output8").innerHTML = "Off to college, you go.";
     }else if(cheekyPass2>149){
         document.getElementById("output8").innerHTML = "Off to college you go.";
     }else{
@@ -155,13 +155,10 @@ function tempCal(){
 }
 
 function triCal(){
-    let sideA = document.getElementById("input10").value;
+    let sideA = document.getElementById("input_sideA").value;
     let sideB = document.getElementById("input10.1").value;
     let sideC = document.getElementById("input10.2").value;
-    let sum2Sides1 = +sideA+ +sideB;
-    let sum2Sides2 = +sideB+ +sideC;
-    let sum2Sides3 = +sideA+ +sideC;
-    if(sum2Sides1>sideC && sum2Sides2>sideA && sum2Sides3>sideB){
+    if(sideA + sideB > sideA && sideA + sideC > sideB &&  sideB + sideC > sideA){
         document.getElementById("output10").innerHTML = "It is a triangle.";
     }else{
         document.getElementById("output10").innerHTML = "It isn't a triangle.";
